@@ -160,6 +160,28 @@ module.exports = (env, options) => ({
 });
 ```
 
+## Development
+
+Add this library to your main project by adding a path entry to `mix.exs`:
+
+```
+{:phoenix_live_react, path: "../phoenix_live_react"},
+```
+
+Also update the `phoenix_live_react` entry in `package.json` to the correct path:
+
+```
+"phoenix_live_react": "file:../../phoenix_live_react",
+```
+
+Run `yarn watch` from the `assets` folder to rebuild the output JS file while making changes.
+
+The main project won't see any change until you force the upgrade of this library with:
+
+```
+yarn upgrade phoenix_live_react
+```
+
 ## React phoenix
 
 This library is inspired by [react-phoenix](https://github.com/geolessel/react-phoenix).
